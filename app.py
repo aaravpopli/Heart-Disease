@@ -195,10 +195,6 @@ if st.button("🔮 Predict Heart Disease Risk"):
         prediction = model.predict(input_df_scaled)[0]
         proba = model.predict_proba(input_df_scaled)[0]
 
-    # DEBUG - remove later
-    st.write(f"Debug - P(low risk): {proba[0]:.3f}, P(high risk): {proba[1]:.3f}")
-    st.write(f"Input columns: {list(input_df.columns)}")
-    st.write(f"Raw values: {input_df.values}")
 
     # Display result
     if prediction == 1:
